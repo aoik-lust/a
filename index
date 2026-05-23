@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>葵区/lust</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #f0f0f0;
+      font-family: -apple-system, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 3rem 1.2rem 4rem;
+    }
+    .profile { text-align: center; margin-bottom: 2rem; }
+    .avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin: 0 auto 0.8rem; display: block; }
+    .name { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 0.4rem; color: #111; }
+    .bio { font-size: 1rem; color: #666; line-height: 1.6; }
+    .links { list-style: none; width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 0.75rem; }
+    .links li { opacity: 0; transform: translateY(10px); }
+    .links li:nth-child(1) { animation: up 0.4s ease 0.1s forwards; }
+    .links li:nth-child(2) { animation: up 0.4s ease 0.2s forwards; }
+    .links li:nth-child(3) { animation: up 0.4s ease 0.3s forwards; }
+    .links li:nth-child(4) { animation: up 0.4s ease 0.4s forwards; }
+    @keyframes up { to { opacity: 1; transform: translateY(0); } }
+    .links a {
+      display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem;
+      background: #fff; border-radius: 12px; text-decoration: none; color: #111;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .links a:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    .icon { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #111; }
+    .icon.note-icon { background: #fff; border: 1.5px solid #ddd; }
+    .text { flex: 1; }
+    .link-title { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.02em; }
+    .link-sub { font-size: 0.88rem; color: #888; margin-top: 0.15rem; }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <!-- 写真追加: <img class="avatar" src="1661581822538-8laM2PrhdB.webp" alt=""> -->
+    <div class="name">葵区/lust</div>
+    <div class="bio">ブルアカ・ゲーム・note</div>
+  </div>
+  <ul class="links">
+    <li>
+      <a href="https://x.com/rh9ko" target="_blank" rel="noopener">
+        <div class="icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723 9.99 9.99 0 0 1-3.127 1.195 4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z"/>
+          </svg>
+        </div>
+        <div class="text">
+          <div class="link-title">Twitter</div>
+          <div class="link-sub">@rh9ko</div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://note.com/aoik_" target="_blank" rel="noopener">
+        <div class="icon note-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <text x="5" y="22" font-size="22" font-weight="900" font-family="Georgia, serif" fill="#111">n</text>
+          </svg>
+        </div>
+        <div class="text">
+          <div class="link-title">note</div>
+          <div class="link-sub">日記・狂い</div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://youtube.com/@yourhandle" target="_blank" rel="noopener">
+        <div class="icon" style="background:#ff0000;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </div>
+        <div class="text">
+          <div class="link-title">YouTube</div>
+          <div class="link-sub">葵区のおすすめ動画が見れます！</div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">
+        <div class="icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+        </div>
+        <div class="text">
+          <div class="link-title">Instagram</div>
+          <div class="link-sub">やってるわけ無い</div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</body>
+</html>
